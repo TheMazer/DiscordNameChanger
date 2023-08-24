@@ -1,0 +1,59 @@
+.scroll-pane .viewport, .scroll-pane .viewport:focused {
+    -fx-background-color: transparent;
+}
+.scroll-pane, .scroll-pane:focused {
+    -fx-background-color: transparent;
+} // #232428
+
+
+.button {
+    -fx-background-color: #4E5058;
+    -fx-background-radius: 3;
+    -fx-background-insets: 0;
+    -fx-text-fill: white;
+    //-fx-font-size: 14;
+}
+.button:hover {
+    -fx-background-color: #41444A;
+}
+.button:pressed {
+    -fx-background-color: #484A51;
+}
+
+.primary {
+    -fx-background-color: #5865F2;
+}
+.primary:hover {
+    -fx-background-color: #4752C4;
+}
+.primary:pressed {
+    -fx-background-color: #3C45A5;
+}
+
+.danger {
+    -fx-background-color: #DA373C;
+}
+.danger:hover {
+    -fx-background-color: #A12828;
+}
+.danger:pressed {
+    -fx-background-color: #8F2022;
+}
+
+.success {
+    -fx-background-color: #248046;
+}
+.success:hover {
+    -fx-background-color: #1A6334;
+}
+.success:pressed {
+    -fx-background-color: #15562B;
+}
+
+
+.text-field {
+    -fx-background-color: #383A40;
+    -fx-background-radius: 3;
+    -fx-text-fill: white;
+    -fx-prompt-text-fill: #6D6F78;
+}

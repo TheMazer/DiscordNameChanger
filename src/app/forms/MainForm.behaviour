@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<behaviours>
+  <target id="panelAlt">
+    <behaviour color="#00000066" offsetX="0" offsetY="0" radius="10" spread="0" type="behaviour\custom\DropShadowEffectBehaviour" when="ALWAYS"/>
+    <behaviour animated="1" opacity="0.95" opacityEnabled="" type="behaviour\custom\DraggingFormBehaviour"/>
+  </target>
+</behaviours>

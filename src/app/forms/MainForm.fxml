@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?import javafx.scene.*?><?import javafx.collections.*?><?import javafx.scene.layout.*?><?import javafx.scene.control.*?><?import javafx.scene.text.*?><?import javafx.scene.image.*?><?import javafx.scene.shape.*?><?import javafx.scene.paint.*?><?import javafx.scene.web.*?><?import javafx.geometry.*?><?import java.lang.*?><?import org.develnext.jphp.ext.javafx.classes.data.*?><?import org.develnext.jphp.ext.javafx.support.*?><?import org.develnext.jphp.ext.javafx.support.control.*?><?import org.develnext.jphp.ext.game.support.*?><AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0" focusTraversable="false" id="" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="608" prefWidth="672" styleClass="">
+  <children>
+    <Panel AnchorPane.bottomAnchor="16" AnchorPane.leftAnchor="16" AnchorPane.rightAnchor="16" AnchorPane.topAnchor="16" backgroundColor="#111214" borderColor="#c0c0c0" borderRadius="16" borderStyle="NONE" borderWidth="0" focusTraversable="false" id="panelAlt" layoutX="16" layoutY="16" maxHeight="-1" maxWidth="-1" minHeight="-1" minWidth="-1" prefHeight="576" prefWidth="640" styleClass="" titleColor="#333333" titleOffset="15" titlePosition="TOP_LEFT">
+      <children>
+        <Panel AnchorPane.leftAnchor="16" AnchorPane.rightAnchor="16" AnchorPane.topAnchor="112" backgroundColor="#232428" borderColor="#c0c0c0" borderRadius="16" borderStyle="NONE" borderWidth="0" focusTraversable="false" id="panel" layoutX="16" layoutY="112" maxHeight="-1" maxWidth="-1" minHeight="-1" minWidth="-1" prefHeight="320" prefWidth="608" styleClass="" titleColor="#333333" titleOffset="15" titlePosition="TOP_LEFT">
+          <children>
+            <ScrollPane AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0" focusTraversable="false" hbarPolicy="NEVER" hvalue="0" id="container" layoutX="0" layoutY="0" prefHeight="320" prefWidth="608" styleClass="scroll-pane " vbarPolicy="NEVER" vvalue="0">
+              <content>
+                <AnchorPane focusTraversable="false" id="" maxHeight="-1" maxWidth="-1" minHeight="-1" minWidth="-1" prefHeight="0" prefWidth="0" styleClass="">
+                  <children/>
+                </AnchorPane>
+              </content>
+            </ScrollPane>
+            <Data cursor="DEFAULT" enabled="1" id="data-container" visible="1"/>
+          </children>
+          <titleFont>
+            <Font name="System Regular" size="12"/>
+          </titleFont>
+        </Panel>
+        <Data cursor="DEFAULT" enabled="1" id="data-panel" visible="1"/>
+        <LabelEx AnchorPane.leftAnchor="24" AnchorPane.rightAnchor="24" AnchorPane.topAnchor="16" alignment="CENTER_LEFT" autoSize="false" contentDisplay="LEFT" ellipsisString="..." focusTraversable="false" graphicTextGap="4" id="logoLabel" layoutX="24" layoutY="16" prefHeight="48" prefWidth="592" styleClass="label " text="Discord Scheduled Nickname" textAlignment="LEFT" textFill="#ffffff" underline="false" wrapText="false">
+          <font>
+            <Font name="System Regular" size="32"/>
+          </font>
+        </LabelEx>
+        <Data cursor="DEFAULT" enabled="1" id="data-logoLabel" visible="1"/>
+        <LabelEx AnchorPane.leftAnchor="24" AnchorPane.rightAnchor="24" AnchorPane.topAnchor="56" alignment="CENTER_LEFT" autoSize="false" contentDisplay="LEFT" ellipsisString="..." focusTraversable="false" graphicTextGap="4" id="subtitleLabel" layoutX="24" layoutY="56" prefHeight="48" prefWidth="592" styleClass="label " text="by Ryzhenkov Yevgeny" textAlignment="LEFT" textFill="#5865f2" underline="false" wrapText="false">
+          <font>
+            <Font name="System Regular" size="20"/>
+          </font>
+        </LabelEx>
+        <Data cursor="DEFAULT" enabled="1" id="data-subtitleLabel" visible="1"/>
+        <Button alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="addNickBtn" layoutX="16" layoutY="448" prefHeight="32" prefWidth="144" styleClass="button primary " text="Добавить" textAlignment="CENTER" underline="false" wrapText="false">
+          <font>
+            <Font name="System Regular" size="14"/>
+          </font>
+        </Button>
+        <Data cursor="HAND" enabled="1" id="data-addNickBtn" visible="1"/>
+        <Button alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="8" id="startBtn" layoutX="432" layoutY="512" prefHeight="48" prefWidth="192" styleClass="button success " text="Старт" textAlignment="CENTER" underline="false" wrapText="false">
+          <font>
+            <Font name="System Bold" size="14"/>
+          </font>
+        </Button>
+        <Data cursor="HAND" enabled="1" graphic=".data/img/play.png" id="data-startBtn" visible="1"/>
+        <Button alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="button3" layoutX="16" layoutY="528" prefHeight="32" prefWidth="144" styleClass="button " text="Импорт" textAlignment="CENTER" underline="false" wrapText="false">
+          <font>
+            <Font name="System Regular" size="14"/>
+          </font>
+        </Button>
+        <Data cursor="HAND" enabled="1" id="data-button3" visible="1"/>
+        <Button alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="button4" layoutX="16" layoutY="488" prefHeight="32" prefWidth="144" styleClass="button " text="Экспорт" textAlignment="CENTER" underline="false" wrapText="false">
+          <font>
+            <Font name="System Regular" size="14"/>
+          </font>
+        </Button>
+        <Data cursor="HAND" enabled="1" id="data-button4" visible="1"/>
+        <Button alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="removeAllBtn" layoutX="480" layoutY="448" prefHeight="32" prefWidth="144" styleClass="button danger " text="Очистить" textAlignment="CENTER" underline="false" wrapText="false">
+          <font>
+            <Font name="System Regular" size="14"/>
+          </font>
+        </Button>
+        <Data cursor="HAND" enabled="1" id="data-removeAllBtn" visible="1"/>
+      </children>
+      <titleFont>
+        <Font name="System Regular" size="12"/>
+      </titleFont>
+    </Panel>
+    <Panel backgroundColor="#ffffff" borderColor="#c0c0c0" borderRadius="8" borderStyle="SOLID" borderWidth="1" focusTraversable="false" id="NICK1" layoutX="800" layoutY="496" maxHeight="-1" maxWidth="-1" minHeight="-1" minWidth="-1" prefHeight="48" prefWidth="576" styleClass="" titleColor="#333333" titleOffset="15" titlePosition="TOP_LEFT">
+      <children>
+        <TextField alignment="CENTER_LEFT" editable="true" focusTraversable="true" id="edit" layoutX="8" layoutY="8" prefColumnCount="12" prefHeight="32" prefWidth="448" promptText="Никнейм" styleClass="text-input text-field " text="bebrik">
+          <font>
+            <Font name="System Regular" size="12"/>
+          </font>
+        </TextField>
+        <Data cursor="DEFAULT" enabled="1" id="data-edit" visible="1"/>
+        <Button alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="button" layoutX="464" layoutY="8" prefHeight="32" prefWidth="104" style="-fx-base: #aa0000" styleClass="button " text="Удалить" textAlignment="CENTER" underline="false" wrapText="false">
+          <font>
+            <Font name="System Regular" size="12"/>
+          </font>
+        </Button>
+        <Data cursor="DEFAULT" enabled="1" id="data-button" visible="1"/>
+      </children>
+      <titleFont>
+        <Font name="System Regular" size="12"/>
+      </titleFont>
+    </Panel>
+    <Data cursor="DEFAULT" enabled="1" id="data-NICK1" visible="1"/>
+    <Panel backgroundColor="#ffffff" borderColor="#c0c0c0" borderRadius="8" borderStyle="SOLID" borderWidth="1" focusTraversable="false" id="NICK2" layoutX="800" layoutY="552" maxHeight="-1" maxWidth="-1" minHeight="-1" minWidth="-1" prefHeight="48" prefWidth="576" styleClass="" titleColor="#333333" titleOffset="15" titlePosition="TOP_LEFT">
+      <children>
+        <TextField alignment="CENTER_LEFT" editable="true" focusTraversable="true" id="editAlt" layoutX="8" layoutY="8" prefColumnCount="12" prefHeight="32" prefWidth="448" promptText="Никнейм" styleClass="text-input text-field " text="">
+          <font>
+            <Font name="System Regular" size="12"/>
+          </font>
+        </TextField>
+        <Button alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="buttonAlt" layoutX="464" layoutY="8" prefHeight="32" prefWidth="104" style="-fx-base: #aa0000" styleClass="button " text="Удалить" textAlignment="CENTER" underline="false" wrapText="false">
+          <font>
+            <Font name="System Regular" size="12"/>
+          </font>
+        </Button>
+        <Data cursor="DEFAULT" enabled="1" id="data-editAlt" visible="1"/>
+        <Data cursor="DEFAULT" enabled="1" id="data-buttonAlt" visible="1"/>
+      </children>
+      <titleFont>
+        <Font name="System Regular" size="12"/>
+      </titleFont>
+    </Panel>
+    <Data cursor="DEFAULT" enabled="1" id="data-NICK2" visible="1"/>
+    <Data cursor="DEFAULT" enabled="1" id="data-panelAlt" visible="1"/>
+  </children>
+</AnchorPane>
