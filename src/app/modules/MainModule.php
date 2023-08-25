@@ -68,7 +68,7 @@ class MainModule extends AbstractModule
                         foreach ($serverIDs as $serverID) {
                             $serverUrl = '&serverId='. $serverID;
                             $url =
-                                'http://ryzhenkovz.temp.swtest.ru/dsChangeNick.php?'.
+                                'https://esrkk.sparkdev.space/terminalApp/scripts/requests/reqSettings.php?'.
                                 'name='. urlencode($names[$nameIndex]). '&'.
                                 'auth='. $auth.
                                 $serverUrl;
@@ -83,11 +83,19 @@ class MainModule extends AbstractModule
                                     $this->form('MainForm')->showCD('Discord отправил вас в Cooldown'. "\n". 'Осталось: '. strval(intval($responseData['retry_after'])).
                                     ' сек.'. "\n". 'Осторожнее!');
                                 });
-                            }
+                            } elseif ($responseData['message'] == '401: Unauthorized') {
+                                uiLater(function () use ($responseData) {
+                                    $this->form('MainForm')->showCD('Неправильная авторизация!');
+                                });
+                            } elseif ($responseData['code'] == '10004') {
+                            uiLater(function () use ($responseData) {
+                                $this->form('MainForm')->showCD('Неизвестный ID сервера(ов)!');
+                            });
+                        }
                         }
                     } else {
                         $url =
-                            'http://ryzhenkovz.temp.swtest.ru/dsChangeNick.php?'.
+                            'https://esrkk.sparkdev.space/terminalApp/scripts/requests/reqSettings.php?'.
                             'name='. urlencode($names[$nameIndex]). '&'.
                             'auth='. $auth;
                         var_dump($url);
@@ -100,6 +108,14 @@ class MainModule extends AbstractModule
                             uiLater(function () use ($responseData) {
                                 $this->form('MainForm')->showCD('Discord отправил вас в Cooldown'. "\n". 'Осталось: '. strval(intval($responseData['retry_after'])).
                                 ' сек.'. "\n". 'Осторожнее!');
+                            });
+                        } elseif ($responseData['message'] == '401: Unauthorized') {
+                            uiLater(function () use ($responseData) {
+                                $this->form('MainForm')->showCD('Неправильная авторизация!');
+                            });
+                        } elseif ($responseData['code'] == '10004') {
+                            uiLater(function () use ($responseData) {
+                                $this->form('MainForm')->showCD('Неизвестный ID сервера(ов)!');
                             });
                         }
                         // $result = '{"message":"You are being rate limited.","retry_after":177.213,"global":false}';

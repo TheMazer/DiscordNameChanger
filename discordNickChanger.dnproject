@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<project author="Евгений" authorOS="Windows 10" createdAt="1692814636834" ideName="DevelNext" ideVersion="16.7.0" ideVersionHash="2017103112" name="discordNickChanger" packageName="app" template="ide\project\templates\DefaultGuiProjectTemplate" updatedAt="1692957975640">
+<project author="Евгений" authorOS="Windows 10" createdAt="1692814636834" ideName="DevelNext" ideVersion="16.7.0" ideVersionHash="2017103112" name="discordNickChanger" packageName="app" template="ide\project\templates\DefaultGuiProjectTemplate" updatedAt="1692969246767">
   <tree>
     <expanded>
     <path src=""/>

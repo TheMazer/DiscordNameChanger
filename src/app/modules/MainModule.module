@@ -1,6 +1,19 @@
 {
   "props": [],
   "components": {
+    "exporter": {
+      "type": "script\\FileChooserScript",
+      "x": 224.0,
+      "y": 32.0,
+      "props": {
+        "saveDialog": true,
+        "filterName": "Файлы конфигурации",
+        "filterExtensions": "*.ini,*.cfg",
+        "filterAny": true,
+        "inputNode": "",
+        "actionNode": ""
+      }
+    },
     "ini": {
       "type": "script\\storage\\IniStorage",
       "x": 96.0,

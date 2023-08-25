@@ -50,6 +50,19 @@
     -fx-background-color: #15562B;
 }
 
+.iconBtn {
+    -fx-background-color: transparent;
+    -fx-opacity: 0.5;
+}
+.iconBtn:hover {
+    -fx-background-color: transparent;
+    -fx-opacity: 1;
+}
+.iconBtn:pressed {
+    -fx-background-color: transparent;
+    -fx-opacity: 0.7;
+}
+
 
 .text-field {
     -fx-background-color: #383A40;

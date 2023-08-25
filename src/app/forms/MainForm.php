@@ -110,7 +110,7 @@ class MainForm extends AbstractForm
         $nickEdit = new UXTextField();
         $nickEdit->width = 448;
         $nickEdit->height = 32;
-        $nickEdit->promptText = 'Никнейм';
+        $nickEdit->promptText = 'Никнейм или команда /sleep';
         if ($nick) {
             $nickEdit->text = $nick;
         }
@@ -200,11 +200,12 @@ class MainForm extends AbstractForm
      */
     function doImportBtnAction(UXEvent $e = null)
     {    
+        $this->ini = new IniStorage();
         $this->mainPanel->enabled = false;
         $file = $this->importer->execute();
         if ($file) {
+            $this->Box->children->clear();
             $this->ini->path = $file;
-            $this->ini->load();
             $data = $this->ini->toArray();
             foreach ($data as $key => $param) {
                 if ($key === 'Settings') {
@@ -217,6 +218,57 @@ class MainForm extends AbstractForm
             }
         }
         $this->mainPanel->enabled = true;
+        $this->checkChangingButtons();
+        $this->logoLabel->requestFocus();
+    }
+
+    /**
+     * @event exportBtn.action 
+     */
+    function doExportBtnAction(UXEvent $e = null)
+    {    
+        $this->ini = new IniStorage();
+        $this->mainPanel->enabled = false;
+        $file = $this->exporter->execute();
+        if ($file) {
+            $this->ini->path = $file;
+            $this->ini->load();
+            foreach ($this->ini->sections() as $section) {
+                $this->ini->removeSection($section);
+            }
+            $this->ini->save();
+            
+            // Saving config
+            $this->ini->set('interval', $this->intervalField->text, 'Settings');
+            $this->ini->set('ids', $this->serverIdEdit->text, 'Settings');
+            $this->ini->set('auth', $this->authEdit->text, 'Settings');
+            
+            $elements = $this->Box->children;
+            var_dump($elements);
+            $index = 1;
+            foreach ($elements as $elem) {
+                $this->ini->set('field', $elem->children[0]->text, strval($index));
+                $index++;
+            }
+        }
+        $this->mainPanel->enabled = true;
+        $this->logoLabel->requestFocus();
+    }
+
+    /**
+     * @event closeBtn.action 
+     */
+    function doCloseBtnAction(UXEvent $e = null)
+    {    
+        app()->shutdown();
+    }
+
+    /**
+     * @event minimizeBtn.action 
+     */
+    function doMinimizeBtnAction(UXEvent $e = null)
+    {
+        app()->minimizeForm('MainForm');
     }
 
 

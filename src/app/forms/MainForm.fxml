@@ -115,6 +115,18 @@
           </font>
         </LabelEx>
         <Data cursor="DEFAULT" enabled="1" id="data-cdLabel" visible="1"/>
+        <Button alignment="CENTER" contentDisplay="LEFT" ellipsisString="" focusTraversable="true" graphicTextGap="4" id="closeBtn" layoutX="592" layoutY="16" opacity="0.5" prefHeight="32" prefWidth="32" styleClass="button iconBtn " text="" textAlignment="CENTER" underline="false" wrapText="false">
+          <font>
+            <Font name="System Regular" size="12"/>
+          </font>
+        </Button>
+        <Data cursor="HAND" enabled="1" graphic=".data/img/close.png" id="data-closeBtn" visible="1"/>
+        <Button alignment="CENTER" contentDisplay="LEFT" ellipsisString="" focusTraversable="true" graphicTextGap="4" id="minimizeBtn" layoutX="560" layoutY="16" opacity="0.5" prefHeight="32" prefWidth="32" styleClass="button iconBtn " text="" textAlignment="CENTER" underline="false" wrapText="false">
+          <font>
+            <Font name="System Regular" size="12"/>
+          </font>
+        </Button>
+        <Data cursor="HAND" enabled="1" graphic=".data/img/minimize.png" id="data-minimizeBtn" visible="1"/>
       </children>
       <titleFont>
         <Font name="System Regular" size="12"/>
