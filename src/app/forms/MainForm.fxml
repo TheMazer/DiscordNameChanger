@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?import javafx.scene.*?><?import javafx.collections.*?><?import javafx.scene.layout.*?><?import javafx.scene.control.*?><?import javafx.scene.text.*?><?import javafx.scene.image.*?><?import javafx.scene.shape.*?><?import javafx.scene.paint.*?><?import javafx.scene.web.*?><?import javafx.geometry.*?><?import java.lang.*?><?import org.develnext.jphp.ext.javafx.classes.data.*?><?import org.develnext.jphp.ext.javafx.support.*?><?import org.develnext.jphp.ext.javafx.support.control.*?><?import org.develnext.jphp.ext.game.support.*?><AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0" focusTraversable="false" id="" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="656" prefWidth="672" styleClass="">
   <children>
-    <Panel AnchorPane.bottomAnchor="16" AnchorPane.leftAnchor="16" AnchorPane.rightAnchor="16" AnchorPane.topAnchor="16" backgroundColor="#111214" borderColor="#c0c0c0" borderRadius="16" borderStyle="NONE" borderWidth="0" focusTraversable="false" id="panelAlt" layoutX="16" layoutY="16" maxHeight="-1" maxWidth="-1" minHeight="-1" minWidth="-1" prefHeight="624" prefWidth="640" styleClass="" titleColor="#333333" titleOffset="15" titlePosition="TOP_LEFT">
+    <Panel AnchorPane.bottomAnchor="16" AnchorPane.leftAnchor="16" AnchorPane.rightAnchor="16" AnchorPane.topAnchor="16" backgroundColor="#111214" borderColor="#c0c0c0" borderRadius="16" borderStyle="NONE" borderWidth="0" focusTraversable="false" id="mainPanel" layoutX="16" layoutY="16" maxHeight="-1" maxWidth="-1" minHeight="-1" minWidth="-1" prefHeight="624" prefWidth="640" styleClass="" titleColor="#333333" titleOffset="15" titlePosition="TOP_LEFT">
       <children>
         <Panel AnchorPane.leftAnchor="16" AnchorPane.rightAnchor="16" AnchorPane.topAnchor="112" backgroundColor="#232428" borderColor="#c0c0c0" borderRadius="16" borderStyle="NONE" borderWidth="0" focusTraversable="false" id="panel" layoutX="16" layoutY="112" maxHeight="-1" maxWidth="-1" minHeight="-1" minWidth="-1" prefHeight="320" prefWidth="608" styleClass="" titleColor="#333333" titleOffset="15" titlePosition="TOP_LEFT">
           <children>
@@ -120,6 +120,6 @@
         <Font name="System Regular" size="12"/>
       </titleFont>
     </Panel>
-    <Data cursor="DEFAULT" enabled="1" id="data-panelAlt" visible="1"/>
+    <Data cursor="DEFAULT" enabled="1" id="data-mainPanel" visible="1"/>
   </children>
 </AnchorPane>

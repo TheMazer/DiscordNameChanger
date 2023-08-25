@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <behaviours>
-  <target id="panelAlt">
-    <behaviour color="#00000066" offsetX="0" offsetY="0" radius="10" spread="0" type="behaviour\custom\DropShadowEffectBehaviour" when="ALWAYS"/>
-    <behaviour animated="1" opacity="0.95" opacityEnabled="" type="behaviour\custom\DraggingFormBehaviour"/>
-  </target>
   <target id="intervalField">
     <behaviour allowedSymbols="0123456789" matchCase="" maxLength="6" type="behaviour\custom\KeyInputRuleBehaviour"/>
   </target>
@@ -12,5 +8,9 @@
   </target>
   <target id="cdLabel">
     <behaviour color="#da373c" offsetX="0" offsetY="0" radius="10" spread="0" type="behaviour\custom\DropShadowEffectBehaviour" when="ALWAYS"/>
+  </target>
+  <target id="mainPanel">
+    <behaviour color="#00000066" offsetX="0" offsetY="0" radius="10" spread="0" type="behaviour\custom\DropShadowEffectBehaviour" when="ALWAYS"/>
+    <behaviour animated="1" opacity="0.95" opacityEnabled="" type="behaviour\custom\DraggingFormBehaviour"/>
   </target>
 </behaviours>

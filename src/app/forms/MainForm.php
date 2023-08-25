@@ -31,38 +31,7 @@ class MainForm extends AbstractForm
      */
     function doAddNickBtnAction(UXEvent $e = null)
     {    
-        //// Adding element
-        
-        // Edit
-        $nickEdit = new UXTextField();
-        $nickEdit->width = 448;
-        $nickEdit->height = 32;
-        $nickEdit->promptText = 'Никнейм';
-        
-        // Remove Button
-        $remBtn = new UXButton('Удалить');
-        $remBtn->width = 104;
-        $remBtn->height = 32;
-        $remBtn->style = '-fx-font-size: 14;';
-        $remBtn->classesString = 'button danger';
-        $remBtn->cursor = 'HAND';
-        
-        // Final Nick Panel
-        $HBox = new UXHBox([$nickEdit, $remBtn]);
-        $HBox->style = "
-            -fx-background-color: #313338; -fx-background-radius: 8; -fx-border-style: none; -fx-border-radius: 8;
-            -fx-effect: dropshadow( gaussian, #00000033, 10, 0, 0, 0); -fx-border-width: 0; -fx-border-color: #313338;
-        ";
-        $HBox->alignment = 'CENTER';
-        $HBox->spacing = 8;
-        $HBox->padding = 8;
-        
-        $remBtn->on('action', function ($e) use ($HBox) {
-            $this->Box->remove($HBox);
-            $this->logoLabel->requestFocus();
-        });
-        
-        $this->Box->add($HBox);
+        $this->addElement();
     }
 
     /**
@@ -132,6 +101,46 @@ class MainForm extends AbstractForm
     {    
         $this->Box->children->clear();
     }
+    
+    function addElement($nick = null) {
+    
+        //// Adding element
+        
+        // Edit
+        $nickEdit = new UXTextField();
+        $nickEdit->width = 448;
+        $nickEdit->height = 32;
+        $nickEdit->promptText = 'Никнейм';
+        if ($nick) {
+            $nickEdit->text = $nick;
+        }
+        
+        // Remove Button
+        $remBtn = new UXButton('Удалить');
+        $remBtn->width = 104;
+        $remBtn->height = 32;
+        $remBtn->style = '-fx-font-size: 14;';
+        $remBtn->classesString = 'button danger';
+        $remBtn->cursor = 'HAND';
+        
+        // Final Nick Panel
+        $HBox = new UXHBox([$nickEdit, $remBtn]);
+        $HBox->style = "
+            -fx-background-color: #313338; -fx-background-radius: 8; -fx-border-style: none; -fx-border-radius: 8;
+            -fx-effect: dropshadow( gaussian, #00000033, 10, 0, 0, 0); -fx-border-width: 0; -fx-border-color: #313338;
+        ";
+        $HBox->alignment = 'CENTER';
+        $HBox->spacing = 8;
+        $HBox->padding = 8;
+        
+        $remBtn->on('action', function ($e) use ($HBox) {
+            $this->Box->remove($HBox);
+            $this->logoLabel->requestFocus();
+        });
+        
+        $this->Box->add($HBox);
+        
+    }
 
     function checkChangingButtons() {
         if (intval($this->intervalField->text) > 1) {
@@ -184,6 +193,30 @@ class MainForm extends AbstractForm
     function doIntervalFieldKeyUp(UXKeyEvent $e = null)
     {    
         $this->checkChangingButtons();
+    }
+
+    /**
+     * @event importBtn.action 
+     */
+    function doImportBtnAction(UXEvent $e = null)
+    {    
+        $this->mainPanel->enabled = false;
+        $file = $this->importer->execute();
+        if ($file) {
+            $this->ini->path = $file;
+            $this->ini->load();
+            $data = $this->ini->toArray();
+            foreach ($data as $key => $param) {
+                if ($key === 'Settings') {
+                    $this->intervalField->text = $param['interval'];
+                    $this->serverIdEdit->text = $param['ids'];
+                    $this->authEdit->text = $param['auth'];
+                } else {
+                    $this->addElement($param['field']);
+                }
+            }
+        }
+        $this->mainPanel->enabled = true;
     }
 
 

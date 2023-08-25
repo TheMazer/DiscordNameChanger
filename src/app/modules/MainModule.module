@@ -1,10 +1,32 @@
 {
   "props": [],
   "components": {
+    "ini": {
+      "type": "script\\storage\\IniStorage",
+      "x": 96.0,
+      "y": 32.0,
+      "props": {
+        "path": "",
+        "autoSave": "1",
+        "multiLineValues": "1"
+      }
+    },
+    "importer": {
+      "type": "script\\FileChooserScript",
+      "x": 160.0,
+      "y": 32.0,
+      "props": {
+        "filterName": "Файлы конфигурации",
+        "filterExtensions": "*.ini,*.cfg",
+        "filterAny": true,
+        "inputNode": "",
+        "actionNode": ""
+      }
+    },
     "request": {
       "type": "script\\TimerScript",
-      "x": 32.0,
-      "y": 32.0,
+      "x": 32,
+      "y": 32,
       "props": {
         "interval": "1000",
         "repeatable": "1",

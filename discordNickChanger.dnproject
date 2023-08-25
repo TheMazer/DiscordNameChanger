@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<project author="Евгений" authorOS="Windows 10" createdAt="1692814636834" ideName="DevelNext" ideVersion="16.7.0" ideVersionHash="2017103112" name="discordNickChanger" packageName="app" template="ide\project\templates\DefaultGuiProjectTemplate" updatedAt="1692814646543">
+<project author="Евгений" authorOS="Windows 10" createdAt="1692814636834" ideName="DevelNext" ideVersion="16.7.0" ideVersionHash="2017103112" name="discordNickChanger" packageName="app" template="ide\project\templates\DefaultGuiProjectTemplate" updatedAt="1692957975640">
   <tree>
     <expanded>
-      <path src=""/>
+    <path src=""/>
       <path src="/src"/>
+      <path src="/src/.data"/>
+      <path src="/src/.data/font"/>
+      <path src="/src/.data/img"/>
       <path src="/src/.theme"/>
       <path src="/src/app"/>
       <path src="/src/app/forms"/>
@@ -11,13 +14,13 @@
     </expanded>
   </tree>
   <openedFiles>
-    <file src="discordNickChanger.dnproject"/>
+  <file src="discordNickChanger.dnproject"/>
     <file src="src/app/modules/MainModule.php"/>
     <file selected="1" src="src/app/forms/MainForm.php"/>
   </openedFiles>
   <files/>
   <behaviours>
-    <behaviour class="ide\project\behaviours\BundleProjectBehaviour"/>
+  <behaviour class="ide\project\behaviours\BundleProjectBehaviour"/>
     <behaviour class="ide\project\behaviours\PhpProjectBehaviour"/>
     <behaviour class="ide\project\behaviours\JavaPlatformBehaviour"/>
     <behaviour class="ide\project\behaviours\GuiFrameworkProjectBehaviour"/>
