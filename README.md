@@ -1,5 +1,8 @@
 # DiscordNameChanger ![Static Badge](https://img.shields.io/badge/build-no_status-lightgray)
-Этот инструмент меняет никнейм в Discord с помощью API
+This tool can change your Discord nickname with an API
+
+## Overview
+<a href="https://www.youtube.com/watch?v=As93vIuxjU8"><img src="https://img.youtube.com/vi/As93vIuxjU8/0.jpg" height="256"></a>
 
 ## How to run?
 
