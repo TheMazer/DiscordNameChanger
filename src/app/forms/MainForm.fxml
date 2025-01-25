@@ -109,7 +109,7 @@
           </font>
         </TextField>
         <Data cursor="DEFAULT" enabled="1" id="data-serverIdEdit" visible="1"/>
-        <LabelEx alignment="CENTER" autoSize="false" contentDisplay="LEFT" ellipsisString="..." focusTraversable="false" graphicTextGap="4" id="cdLabel" layoutX="672" layoutY="112" opacity="0" prefHeight="320" prefWidth="608" styleClass="label " text="Discord отправил вас в Cooldown&#10;Осталось: 135.177 сек." textAlignment="CENTER" textFill="#da373c" underline="false" wrapText="false">
+        <LabelEx alignment="CENTER" autoSize="false" contentDisplay="LEFT" ellipsisString="..." focusTraversable="false" graphicTextGap="4" id="cdLabel" layoutX="672" layoutY="112" opacity="0" prefHeight="320" prefWidth="608" styleClass="label " text="Discord отправил вас в Cooldown&#10;Осталось: 135.177 сек." textAlignment="CENTER" textFill="#da373c" underline="false" wrapText="true">
           <font>
             <Font name="System Bold" size="18"/>
           </font>

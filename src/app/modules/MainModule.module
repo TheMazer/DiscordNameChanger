@@ -3,8 +3,8 @@
   "components": {
     "exporter": {
       "type": "script\\FileChooserScript",
-      "x": 224.0,
-      "y": 32.0,
+      "x": 224,
+      "y": 32,
       "props": {
         "saveDialog": true,
         "filterName": "Файлы конфигурации",
@@ -16,8 +16,8 @@
     },
     "ini": {
       "type": "script\\storage\\IniStorage",
-      "x": 96.0,
-      "y": 32.0,
+      "x": 96,
+      "y": 32,
       "props": {
         "path": "",
         "autoSave": "1",
@@ -26,8 +26,8 @@
     },
     "importer": {
       "type": "script\\FileChooserScript",
-      "x": 160.0,
-      "y": 32.0,
+      "x": 160,
+      "y": 32,
       "props": {
         "filterName": "Файлы конфигурации",
         "filterExtensions": "*.ini,*.cfg",
